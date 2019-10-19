@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pharos-Gea</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel='stylesheet' href='../../resources/css/magnific-popup.css'>
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bbootstrap 4 -->
+    <link rel="stylesheet" href="../../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="../../plugins/jqvmap/jqvmap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="../../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="../../plugins/daterangepicker/daterangepicker.css">
+    <!-- summernote -->
+    <link rel="stylesheet" href="../../plugins/summernote/summernote-bs4.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+
+        <link  rel="stylesheet" href="../../resources/css/featherlight.min.css" />
+
+        <link rel="stylesheet" href="../../resources/css/styles.css">
+
+
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+    <div jq-include-html="../../part/nabar.html"></div>
+
+    <div jq-include-html="../../part/sidebar_student.html"></div>
+
+    <div jq-include-html="../../part/contentIndex.html"></div>
+</div>
+<div id="test-popup" class="white-popup mfp-hide">
+    <audio src="" id="hidden-player" autoplay></audio>
+    <div id="player">
+        <img src="" class="coverr" alt="" height="100" width="100" />
+        <div class="player-song">
+            <div class="title"></div>
+            <div class="artist"></div>
+            <progress value="0" max="1"></progress>
+            <div class="timestamps">
+                <div class="time-now">0:00:00</div>
+                <div class="time-finish">0:00:00</div>
+            </div>
+            <div class="actions">
+                <div class="prev">
+                    <i class="material-icons">fast_rewind</i>
+                </div>
+                <div class="play">
+                    <a class="play-button paused" href="#">
+                        <div class="left"></div>
+                        <div class="rights"></div>
+                        <div class="triangle-1"></div>
+                        <div class="triangle-2"></div>
+                    </a>
+                </div>
+                <div class="next">
+                    <i class="material-icons">fast_forward</i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="../../plugins/jquery/jquery.min.js"></script>
+
+<!-- jQuery UI 1.11.4 -->
+<script src="../../plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+
+<!-- Bootstrap 4 -->
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="../../plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="../../plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="../../plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="../../plugins/jqvmap/maps/jquery.vmap.world.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="../../plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="../../plugins/moment/moment.min.js"></script>
+<script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="../../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="../../plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="../../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.js"></script>
+<script src='../../resources/js/jquery.magnific-popup.min.js'></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="../../resources/js/custom.js"></script>
+<script src="../../resources/js/featherlight.min.js"></script>
+
+<script src="../../resources/js/script.js"></script>
+<script src="../../resources/js/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+
+<script src="../../dist/js/pages/dashboard.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+<script>
+    $.widget.bridge('uibutton', $.ui.button);
+    $.holdReady(true);
+    $('div[jq-include-html]').each(function () {
+
+        $(this).load($(this).attr("jq-include-html"));
+    });
+    $(window).on("load", function () {
+        $.holdReady(false);
+    });
+
+    $( document ).ready(function() {
+        activateSideBarMenu('/index.html');
+    });
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//stats.g.doubleclick.net/dc.js','ga');
+
+    ga('create', 'UA-5342062-6', 'noelboss.github.io');
+    ga('send', 'pageview');
+
+</script>
+</body>
+</html>
